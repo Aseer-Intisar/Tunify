@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriptions - Tunify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Tunify</div>
+        <nav>
+            <ul>
+                <li><a href="index1.php">Home</a></li>
+                <li><a href="songs.php">Songs</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="http://localhost/tunify/albums.php">Artists</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="subscriptions">
+            <h1>Choose Your Subscription Plan</h1>
+            <div class="subscription-container">
+                
+                <div class="subscription">
+                    <h2>Free</h2>
+                    <p>Price: <strong>0 TAKA</strong></p>
+                    <ul>
+                        <li>Access to basic features</li>
+                        <li>Ads included</li>
+                        <li>Limited skips</li>
+                    </ul>
+                    <form method="post" action="update_subscription.php">
+                        <button type="submit" name="plan" value="free">Select Free Plan</button>
+                    </form>
+                </div>
+
+               
+                <div class="subscription">
+                    <h2>Individual</h2>
+                    <p>Price: <strong>100 TAKA/month</strong></p>
+                    <ul>
+                        <li>Ad-free music</li>
+                        <li>Unlimited skips</li>
+                        <li>Offline listening</li>
+                    </ul>
+                    <form method="post" action="update_subscription.php">
+                        <button type="submit" name="plan" value="individual">Select Individual Plan</button>
+                    </form>
+                </div>
+
+                
+                <div class="subscription">
+                    <h2>Family</h2>
+                    <p>Price: <strong>250 TAKA/month</strong></p>
+                    <ul>
+                        <li>Ad-free music</li>
+                        <li>Unlimited skips</li>
+                        <li>Offline listening</li>
+                        <li>For up to 6 accounts</li>
+                    </ul>
+                    <form method="post" action="update_subscription.php">
+                        <button type="submit" name="plan" value="family">Select Family Plan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
