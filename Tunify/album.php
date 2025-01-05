@@ -12,12 +12,12 @@
         <div class="logo">Tunify</div>
         <nav>
             <ul>
-                <li><a href="index1.php">Home</a></li>
-                <li><a href="songs.php">Songs</a></li>
-                <li><a href="albums.php">Albums</a></li>
-                <li><a href="artists.html">Artists</a></li>
-                <li><a href="playlists.php">Playlists</a></li>
-                <li><a href="subscriptions.php">Subscriptions</a></li>
+                <li><a href="http://localhost/tunify/index1.php">Home</a></li>
+                <li><a href="http://localhost/tunify/songs.php">Songs</a></li>
+                <li><a href="http://localhost/tunify/album.php">Albums</a></li>
+                <li><a href="http://localhost/tunify/artists.php">Artists</a></li>
+                <li><a href="http://localhost/tunify/playlists.php">Playlists</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
             </ul>
         </nav>
     </header>
@@ -57,7 +57,7 @@
                         echo '<p>No songs found for this album.</p>';
                     }
                 } else {
-                    // Fetch all albums
+                  
                     $sql = "SELECT album.id, album.name AS album_name, artist.name AS artist_name 
                             FROM album 
                             JOIN artist ON album.artist_id = artist.id";

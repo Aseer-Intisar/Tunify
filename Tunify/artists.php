@@ -12,12 +12,12 @@
         <div class="logo">Tunify</div>
         <nav>
             <ul>
-                <li><a href="index1.php">Home</a></li>
-                <li><a href="songs.php">Songs</a></li>
-                <li><a href="album.php">Albums</a></li>
-                <li><a href="artists.php">Artists</a></li>
-                <li><a href="playlists.php">Playlists</a></li>
-                <li><a href="subscriptions.php">Subscriptions</a></li>
+                <li><a href="http://localhost/tunify/index1.php">Home</a></li>
+                <li><a href="http://localhost/tunify/songs.php">Songs</a></li>
+                <li><a href="http://localhost/tunify/album.php">Albums</a></li>
+                <li><a href="http://localhost/tunify/artists.php">Artists</a></li>
+                <li><a href="http://localhost/tunify/playlists.php">Playlists</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +27,7 @@
             <h2>Artists</h2>
             <div class="artist-container">
                 <?php
-                // Database connection
+               
                 $conn = new mysqli("localhost", "root", "", "tunify");
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
@@ -84,7 +84,7 @@
                         echo '<p>Artist not found.</p>';
                     }
                 } else {
-                    // Fetch all artists for display
+                  
                     $artists_query = "SELECT * FROM artist";
                     $artists_result = $conn->query($artists_query);
 

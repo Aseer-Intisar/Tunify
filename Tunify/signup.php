@@ -1,4 +1,4 @@
-<!-- filepath: /c:/xampp/htdocs/Tunify/signup.php -->
+
 <?php
 include("database.php");
 
