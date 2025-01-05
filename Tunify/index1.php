@@ -118,11 +118,6 @@ if (isset($_POST['song_id']) && isset($_POST['song_title'])) {
                 <input type="text" name="query" placeholder="Search for songs, artists, or albums" required>
                 <button type="submit">Search</button>
             </form>
-            <?php if(isset($_GET['error']) && $_GET['error'] == 'notfound'): ?>
-                <div class="error-message">
-                    No results found for "<?php echo htmlspecialchars($_GET['query']); ?>"
-                </div>
-            <?php endif; ?>
 
             <nav>
                 <ul class="nav-links">

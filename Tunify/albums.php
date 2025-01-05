@@ -12,12 +12,12 @@
         <div class="logo">Tunify</div>
         <nav>
             <ul>
-            <li><a href="http://localhost/tunify/index1.php">Home</a></li>
-            <li><a href="http://localhost/tunify/songs.php">Songs</a></li>
-            <li><a href="http://localhost/tunify/album.php">Albums</a></li>
-            <li><a href="http://localhost/tunify/artists.php">Artists</a></li>
-            <li><a href="http://localhost/tunify/playlists.php">Playlists</a></li>
-            <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="http://localhost/tunify/index1.php">Home</a></li>
+                <li><a href="http://localhost/tunify/songs.php">Songs</a></li> 
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
             </ul>
         </nav>
     </header>
@@ -27,18 +27,20 @@
             <h2>Albums</h2>
             <div class="album-container">
                 <?php
-               
+                // Database connection
                 $conn = new mysqli('localhost', 'correct_username', 'correct_password', 'database');
 
+                // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
+                // Fetch albums from the database
                 $sql = "SELECT id, title, artist, img_url FROM albums";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                   
+                    // Output data of each row
                     while($row = $result->fetch_assoc()) {
                         echo '<div class="album">';
                         echo '<a href="albums.php?album_id=' . $row["id"] . '">';
